@@ -174,6 +174,59 @@ body{font-family:'SVN-Gilroy','Gilroy','Nunito',-apple-system,sans-serif;backgro
 .insight-text{font-size:11px;color:var(--text-secondary);line-height:1.5}
 .insight-text strong{color:var(--text-primary)}
 
+/* NEXT ACTIONS & APPROVAL */
+.actions-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.action-col{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:20px}
+.action-col-header{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.action-col-title{font-size:12px;font-weight:800;color:var(--text-primary);text-transform:uppercase;letter-spacing:1px}
+.action-item{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid rgba(55,222,231,0.05)}
+.action-item:last-child{border-bottom:none;padding-bottom:0}
+.action-dot{width:7px;height:7px;border-radius:50%;margin-top:5px;flex-shrink:0}
+.ad-high{background:#F06BA0}.ad-med{background:#F59E0B}.ad-low{background:#37DEE7}
+.action-text{font-size:12px;color:var(--text-primary);font-weight:500;line-height:1.4}
+.action-meta{font-size:10px;color:var(--text-muted);margin-top:2px}
+.atag{display:inline-block;font-size:9px;font-weight:700;padding:1px 7px;border-radius:8px;margin-right:4px}
+.at-budget{background:rgba(240,107,160,0.12);color:#F06BA0}
+.at-task{background:rgba(0,104,255,0.12);color:#5599FF}
+.at-event{background:rgba(55,222,231,0.1);color:#37DEE7}
+.approval-badge{font-size:9px;font-weight:700;padding:2px 8px;border-radius:8px;margin-left:8px;white-space:nowrap;flex-shrink:0}
+.ab-urgent{background:rgba(240,107,160,0.15);color:#F06BA0;border:1px solid rgba(240,107,160,0.25)}
+.ab-review{background:rgba(245,158,11,0.12);color:#F59E0B;border:1px solid rgba(245,158,11,0.2)}
+
+/* OKR */
+.okr-card{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:20px 24px}
+.okr-objective{margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--border)}
+.okr-obj-label{font-size:10px;font-weight:700;color:var(--accent-cyan);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+.okr-obj-text{font-size:14px;font-weight:800;color:var(--text-primary);line-height:1.3}
+.okr-krs{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.okr-kr{background:rgba(0,104,255,0.06);border:1px solid var(--border-blue);border-radius:10px;padding:12px 14px}
+.okr-kr-label{font-size:9px;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.7px;margin-bottom:6px}
+.okr-kr-current{font-size:20px;font-weight:800;color:var(--text-primary);display:block;line-height:1}
+.okr-kr-target{font-size:10px;color:var(--text-muted);margin-top:3px}
+.okr-progress{height:4px;background:rgba(55,222,231,0.08);border-radius:2px;margin-top:9px;overflow:hidden}
+.okr-bar{height:100%;border-radius:2px}
+.okr-bar.good{background:linear-gradient(90deg,#22C55E,#37DEE7)}
+.okr-bar.mid{background:linear-gradient(90deg,#F59E0B,#F06BA0)}
+.okr-bar.low{background:linear-gradient(90deg,#EF4444,#F06BA0)}
+.okr-status{font-size:9px;font-weight:700;margin-top:5px}
+.os-on{color:#22C55E}.os-risk{color:#F59E0B}.os-off{color:#EF4444}
+
+/* GAP ANALYSIS */
+.gap-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;position:relative;z-index:1}
+.gap-card{background:rgba(1,10,28,0.65);border:1px solid rgba(240,107,160,0.13);border-radius:12px;overflow:hidden;transition:border-color .2s,transform .2s}
+.gap-card:hover{border-color:rgba(240,107,160,0.3);transform:translateY(-2px)}
+.gap-card-title{font-size:11px;font-weight:800;color:var(--text-primary);padding:11px 14px;background:rgba(0,104,255,0.07);border-bottom:1px solid rgba(55,222,231,0.07);text-transform:uppercase;letter-spacing:.8px}
+.gap-steps{display:grid;grid-template-columns:repeat(4,1fr)}
+.gap-step{padding:10px 12px;border-right:1px solid rgba(55,222,231,0.06)}
+.gap-step:last-child{border-right:none}
+.gap-step-label{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;margin-bottom:5px}
+.gs-current .gap-step-label{color:#8899BB}
+.gs-future .gap-step-label{color:#37DEE7}
+.gs-gap .gap-step-label{color:#F06BA0}
+.gs-action .gap-step-label{color:#22C55E}
+.gap-step-text{font-size:10.5px;color:var(--text-secondary);line-height:1.45}
+.gap-step-text strong{color:var(--text-primary)}
+
 /* PINK ACCENT */
 .si-pink{background:rgba(240,107,160,0.12)}
 .kc-pink::before{background:linear-gradient(90deg,#F06BA0,#A855F7)}
@@ -267,43 +320,185 @@ body{font-family:'SVN-Gilroy','Gilroy','Nunito',-apple-system,sans-serif;backgro
     </div>
   </div>
 
-  <!-- EXPERT INSIGHT PANEL -->
+  <!-- NEXT KEY ACTIONS & NEED APPROVAL -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon si-pink">⚡</div>
+      <span class="section-title">Next Actions & Approval</span>
+      <span class="section-sub">Tháng 5/2026 · cần xử lý</span>
+    </div>
+    <div class="actions-grid">
+      <div class="action-col">
+        <div class="action-col-header">
+          <span style="font-size:15px">🎯</span>
+          <span class="action-col-title">Next Key Actions</span>
+          <span style="margin-left:auto;font-size:10px;color:var(--text-muted)">T5–T6/2026</span>
+        </div>
+        <div class="action-item">
+          <div class="action-dot ad-high"></div>
+          <div><div class="action-text">Scale budget Meta Ads C01 × 3–5 lần với cùng creative set</div><div class="action-meta"><span class="atag at-budget">Budget</span>Deadline: W3/T5 · Priority: High</div></div>
+        </div>
+        <div class="action-item">
+          <div class="action-dot ad-high"></div>
+          <div><div class="action-text">A/B test LinkedIn Ads — amplify content dạng Event Recap (C04)</div><div class="action-meta"><span class="atag at-task">Task</span>Deadline: W4/T5 · Priority: High</div></div>
+        </div>
+        <div class="action-item">
+          <div class="action-dot ad-med"></div>
+          <div><div class="action-text">Segment email list theo industry/intent trước campaign T5</div><div class="action-meta"><span class="atag at-task">Task</span>Deadline: W3/T5 · Priority: Medium</div></div>
+        </div>
+        <div class="action-item">
+          <div class="action-dot ad-high"></div>
+          <div><div class="action-text">Optimize Website CTA + tích hợp live chat intent capture</div><div class="action-meta"><span class="atag at-task">Task</span>Deadline: W1/T6 · Priority: High</div></div>
+        </div>
+        <div class="action-item">
+          <div class="action-dot ad-med"></div>
+          <div><div class="action-text">Chuẩn bị creative set Meta Ads mới — C05 Tuyển sinh Giáo dục</div><div class="action-meta"><span class="atag at-task">Task</span>Deadline: W2/T6 · Priority: Medium</div></div>
+        </div>
+      </div>
+      <div class="action-col">
+        <div class="action-col-header">
+          <span style="font-size:15px">✅</span>
+          <span class="action-col-title">Need Approval</span>
+          <span style="margin-left:auto;font-size:10px;color:var(--text-muted)">Chờ Line Manager</span>
+        </div>
+        <div class="action-item">
+          <div class="action-dot ad-high"></div>
+          <div style="flex:1">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start"><div class="action-text">Tăng Meta Ads budget: 2.7M → 8–12M VND/tháng</div><span class="approval-badge ab-urgent">URGENT</span></div>
+            <div class="action-meta"><span class="atag at-budget">Budget</span>ROI dự kiến ~2,400–3,500 leads/tháng nếu CPL giữ nguyên</div>
+          </div>
+        </div>
+        <div class="action-item">
+          <div class="action-dot ad-high"></div>
+          <div style="flex:1">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start"><div class="action-text">Mở LinkedIn Ads test: $300–500/tháng (~8–13M VND)</div><span class="approval-badge ab-urgent">URGENT</span></div>
+            <div class="action-meta"><span class="atag at-budget">Budget</span>Amplify organic CTR 24.72% → có thể scale B2B pipeline</div>
+          </div>
+        </div>
+        <div class="action-item">
+          <div class="action-dot ad-med"></div>
+          <div style="flex:1">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start"><div class="action-text">Website CRO Project: A/B test + chatbot integration</div><span class="approval-badge ab-review">REVIEW</span></div>
+            <div class="action-meta"><span class="atag at-task">Project</span>Budget TBD · Timeline: Q2–Q3/2026</div>
+          </div>
+        </div>
+        <div class="action-item">
+          <div class="action-dot ad-med"></div>
+          <div style="flex:1">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start"><div class="action-text">Tài trợ Event Q3 — GrowthVerse Summit renewal</div><span class="approval-badge ab-review">REVIEW</span></div>
+            <div class="action-meta"><span class="atag at-event">Event</span>Deadline quyết định: 15/06/2026</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OKR Q2/2026 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon si-cyan">🎯</div>
+      <span class="section-title">OKR — Q2 / 2026</span>
+      <span class="section-sub">Tháng 4–6/2026 · Progress snapshot T4</span>
+    </div>
+    <div class="okr-card">
+      <div class="okr-objective">
+        <div>
+          <div class="okr-obj-label">Objective</div>
+          <div class="okr-obj-text">Xây dựng pipeline leads đa kênh chất lượng cao, tối ưu hiệu quả chi phí và nâng cao conversion rate trên toàn funnel</div>
+        </div>
+      </div>
+      <div class="okr-krs">
+        <div class="okr-kr">
+          <div class="okr-kr-label">KR1 · Leads/tháng</div>
+          <span class="okr-kr-current">920</span>
+          <div class="okr-kr-target">Target ≥ 1,500</div>
+          <div class="okr-progress"><div class="okr-bar mid" style="width:61%"></div></div>
+          <div class="okr-status os-risk">61% · At Risk</div>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr-label">KR2 · CPL Paid</div>
+          <span class="okr-kr-current">101K</span>
+          <div class="okr-kr-target">Target ≤ 80K VND</div>
+          <div class="okr-progress"><div class="okr-bar low" style="width:45%"></div></div>
+          <div class="okr-status os-off">Off Track</div>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr-label">KR3 · Website CVR</div>
+          <span class="okr-kr-current">0.05%</span>
+          <div class="okr-kr-target">Target ≥ 0.2%</div>
+          <div class="okr-progress"><div class="okr-bar low" style="width:25%"></div></div>
+          <div class="okr-status os-off">Off Track</div>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr-label">KR4 · Email Open Rate</div>
+          <span class="okr-kr-current" style="color:var(--accent-cyan)">43%</span>
+          <div class="okr-kr-target">Target ≥ 38%</div>
+          <div class="okr-progress"><div class="okr-bar good" style="width:100%"></div></div>
+          <div class="okr-status os-on">✓ On Track</div>
+        </div>
+        <div class="okr-kr">
+          <div class="okr-kr-label">KR5 · Kênh có Leads</div>
+          <span class="okr-kr-current" style="color:var(--accent-cyan)">3</span>
+          <div class="okr-kr-target">Target ≥ 4 kênh</div>
+          <div class="okr-progress"><div class="okr-bar mid" style="width:75%"></div></div>
+          <div class="okr-status os-risk">75% · Growing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- DEEP DIVE & GAP ANALYSIS -->
   <div class="expert-panel">
     <div class="expert-header">
-      <div class="section-icon si-pink">🧠</div>
-      <span class="expert-title-text">Phân Tích Chuyên Sâu</span>
-      <span class="expert-badge">AI MKT Expert · T4/2026</span>
+      <div class="section-icon si-pink">🔬</div>
+      <span class="expert-title-text">Deep Dive &amp; Gap Analysis</span>
+      <span class="expert-badge">Current → Future · T4/2026</span>
     </div>
-    <div class="expert-grid">
-      <div class="expert-card">
-        <div class="expert-card-label">🚀 Scale Signal — Meta Ads C01</div>
-        <div class="expert-card-body">CPL <strong>3,406 VND</strong> với Frequency <strong>1.71</strong> — còn rất xa ngưỡng saturation (~3.0). Campaign đang deliver lead quality cao với budget chỉ 2.7M VND. Đây là mức hiệu quả hiếm gặp trong ngành B2B SaaS Việt Nam.</div>
-        <div class="expert-card-action">→ Scale budget ×3–5 tháng 5 với cùng creative set trước khi đạt frequency threshold</div>
+    <!-- Framework header -->
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-bottom:14px;position:relative;z-index:1">
+      <div style="padding:7px 12px;text-align:center;background:rgba(136,153,187,0.06);border-radius:8px 0 0 8px;border:1px solid rgba(136,153,187,0.1)"><span style="font-size:10px;font-weight:700;color:#8899BB;text-transform:uppercase;letter-spacing:.8px">📍 Current State</span></div>
+      <div style="padding:7px 12px;text-align:center;background:rgba(55,222,231,0.06);border:1px solid rgba(55,222,231,0.1);border-left:none"><span style="font-size:10px;font-weight:700;color:#37DEE7;text-transform:uppercase;letter-spacing:.8px">🎯 Future State</span></div>
+      <div style="padding:7px 12px;text-align:center;background:rgba(240,107,160,0.06);border:1px solid rgba(240,107,160,0.15);border-left:none"><span style="font-size:10px;font-weight:700;color:#F06BA0;text-transform:uppercase;letter-spacing:.8px">⚡ The Gap</span></div>
+      <div style="padding:7px 12px;text-align:center;background:rgba(34,197,94,0.06);border-radius:0 8px 8px 0;border:1px solid rgba(34,197,94,0.1);border-left:none"><span style="font-size:10px;font-weight:700;color:#22C55E;text-transform:uppercase;letter-spacing:.8px">🚀 Ideas &amp; Action</span></div>
+    </div>
+    <div class="gap-grid">
+      <div class="gap-card">
+        <div class="gap-card-title">📣 Lead Generation &amp; Channel Mix</div>
+        <div class="gap-steps">
+          <div class="gap-step gs-current"><div class="gap-step-label">Current</div><div class="gap-step-text"><strong>920 leads/T4</strong> — 86.6% từ 1 campaign Meta Ads C01. Budget 2.7M VND/tháng.</div></div>
+          <div class="gap-step gs-future"><div class="gap-step-label">Future</div><div class="gap-step-text"><strong>1,500+ leads/tháng</strong> từ ≥ 4 kênh. Không kênh nào chiếm quá 50%.</div></div>
+          <div class="gap-step gs-gap"><div class="gap-step-label">Gap</div><div class="gap-step-text">Thiếu 580 leads/tháng. Over-reliance 1 kênh — rủi ro cao nếu Meta thay đổi policy.</div></div>
+          <div class="gap-step gs-action"><div class="gap-step-label">Action</div><div class="gap-step-text">Scale Meta ×5 + mở LinkedIn Ads + Google Search Q2. Mục tiêu 4 kênh có lead.</div></div>
+        </div>
       </div>
-      <div class="expert-card">
-        <div class="expert-card-label">💡 LinkedIn — Demand Signal Mạnh</div>
-        <div class="expert-card-body">Avg CTR <strong>24.72%</strong> so với benchmark LinkedIn B2B toàn cầu chỉ <strong>0.5–2%</strong>. C04 "Trực tiếp - Trực chiến" đạt <strong>53% CTR</strong> — content dạng Event Recap + thought leadership đang chạm đúng pain point của audience B2B Việt Nam.</div>
-        <div class="expert-card-action">→ Tăng cadence 3–4x/tuần, thử LinkedIn Ads $300–500/tháng để amplify top content</div>
+      <div class="gap-card">
+        <div class="gap-card-title">🌐 Website Conversion Rate</div>
+        <div class="gap-steps">
+          <div class="gap-step gs-current"><div class="gap-step-label">Current</div><div class="gap-step-text"><strong>75,249 sessions → 35 leads</strong> = CVR 0.046%. Traffic tốt nhưng conversion cực thấp.</div></div>
+          <div class="gap-step gs-future"><div class="gap-step-label">Future</div><div class="gap-step-text">CVR <strong>≥ 0.2%</strong> = 150+ leads organic/tháng không tốn acquisition cost.</div></div>
+          <div class="gap-step gs-gap"><div class="gap-step-label">Gap</div><div class="gap-step-text">CVR thấp hơn B2B benchmark 20–40×. Mỗi 0.1% CVR tăng = +75 leads miễn phí.</div></div>
+          <div class="gap-step gs-action"><div class="gap-step-label">Action</div><div class="gap-step-text">A/B test hero CTA, live chat intent capture, retargeting pixel, landing page per segment.</div></div>
+        </div>
       </div>
-      <div class="expert-card">
-        <div class="expert-card-label">⚠️ Email Segmentation Gap</div>
-        <div class="expert-card-body">Cách biệt 3× Open Rate: C07 <strong>44.9%</strong> (107 recipients) vs C02 <strong>14.9%</strong> (947 recipients). Mass blast cold list lớn đang pha loãng sender reputation và giảm deliverability dài hạn.</div>
-        <div class="expert-card-action">→ Segment theo industry/intent trước khi gửi, warm-up cold list 2–3 emails trước campaign chính</div>
+      <div class="gap-card">
+        <div class="gap-card-title">📧 Email Quality &amp; Segmentation</div>
+        <div class="gap-steps">
+          <div class="gap-step gs-current"><div class="gap-step-label">Current</div><div class="gap-step-text">Open rate dao động <strong>14.9%–52.3%</strong> — cách biệt 3× giữa targeted list và mass blast.</div></div>
+          <div class="gap-step gs-future"><div class="gap-step-label">Future</div><div class="gap-step-text">Avg Open Rate <strong>≥ 40%</strong> đồng đều trên tất cả segment. CTR avg ≥ 10%.</div></div>
+          <div class="gap-step gs-gap"><div class="gap-step-label">Gap</div><div class="gap-step-text">Thiếu segmentation by industry/intent. Cold list 988 recipients kéo avg open rate xuống.</div></div>
+          <div class="gap-step gs-action"><div class="gap-step-label">Action</div><div class="gap-step-text">Segment list theo 3 nhóm: warm (engaged), cold (cần warm-up), prospect (mới). Tạo nurture flow.</div></div>
+        </div>
       </div>
-      <div class="expert-card">
-        <div class="expert-card-label">📊 Website CVR — Cơ hội Lớn Nhất</div>
-        <div class="expert-card-body"><strong>75,249 sessions → 35 leads</strong> = CVR 0.046%. B2B SaaS benchmark: 1–2%. Nếu đạt 0.5% là thêm <strong>340+ leads organic/tháng</strong> mà không tốn thêm một đồng acquisition budget.</div>
-        <div class="expert-card-action">→ A/B test hero CTA, thêm live chat intent-capture, retargeting pixel cho unqualified visitors</div>
-      </div>
-      <div class="expert-card">
-        <div class="expert-card-label">🎪 Event ROI — Đánh Giá Đúng Bản Chất</div>
-        <div class="expert-card-body">Event CPL <strong>973K–1M VND</strong> cao hơn Meta Ads ~295×. Tuy nhiên, B2B event lead thường có deal size lớn hơn 3–5× và closing rate cao hơn 20–30% — ROI thực sự cần đo ở pipeline, không ở CPL.</div>
-        <div class="expert-card-action">→ Tag event leads riêng trong CRM, theo dõi deal value 90 ngày để validate investment Q3</div>
-      </div>
-      <div class="expert-card">
-        <div class="expert-card-label">🔗 Channel Concentration Risk</div>
-        <div class="expert-card-body"><strong>86.6% leads</strong> phụ thuộc vào 1 campaign Meta Ads C01 — single point of failure nguy hiểm. Bất kỳ thay đổi algorithm CPM hoặc policy của Meta đều có thể ảnh hưởng toàn bộ pipeline Q2/2026.</div>
-        <div class="expert-card-action">→ Phân bổ budget sang LinkedIn Ads + Google Search để xây multi-channel safety net ngay Q2</div>
+      <div class="gap-card">
+        <div class="gap-card-title">💰 Cost Efficiency &amp; Event ROI</div>
+        <div class="gap-steps">
+          <div class="gap-step gs-current"><div class="gap-step-label">Current</div><div class="gap-step-text">CPL paid avg <strong>101K VND</strong>. Event CPL 973K–1M VND (×295 so với Meta Ads).</div></div>
+          <div class="gap-step gs-future"><div class="gap-step-label">Future</div><div class="gap-step-text">CPL tổng thể <strong>≤ 80K VND</strong>. Event ROI được đo bằng pipeline value, không CPL.</div></div>
+          <div class="gap-step gs-gap"><div class="gap-step-label">Gap</div><div class="gap-step-text">CPL cao 26% vs target. Event spend 97% tổng budget nhưng chỉ 9.6% leads — cần CRM tracking.</div></div>
+          <div class="gap-step gs-action"><div class="gap-step-label">Action</div><div class="gap-step-text">Tag event leads trong CRM, track deal value 90 ngày. Scale digital để kéo blended CPL xuống.</div></div>
+        </div>
       </div>
     </div>
   </div>
