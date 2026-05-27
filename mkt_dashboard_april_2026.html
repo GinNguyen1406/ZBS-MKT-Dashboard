@@ -3,30 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ZBS Marketing Performance Report | Tháng 4/2026</title>
+<title>ZBS Marketing Performance Report</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg-deep: #0B1A32;
-  --bg-card: #132C56;
-  --bg-card-light: #1A3870;
+  --bg-deep: #EEF3FA;
+  --bg-card: #FFFFFF;
+  --bg-card-light: #F2F7FF;
   --accent-blue: #0068FF;
   --accent-blue-light: rgba(0,104,255,0.18);
-  --accent-cyan: #37DEE7;
-  --accent-cyan-light: rgba(55,222,231,0.14);
-  --text-primary: #FFFFFF;
-  --text-secondary: #C2D4EE;
-  --text-muted: #8099BB;
-  --border: rgba(55,222,231,0.20);
-  --border-blue: rgba(0,104,255,0.30);
-  --accent-pink: #F06BA0;
-  --accent-pink-light: rgba(240,107,160,0.11);
-  --accent-pink-border: rgba(240,107,160,0.30);
+  --accent-cyan: #0089A0;
+  --accent-cyan-light: rgba(0,137,160,0.10);
+  --text-primary: #0B1A32;
+  --text-secondary: #3A5A82;
+  --text-muted: #7A90AB;
+  --border: rgba(0,104,255,0.12);
+  --border-blue: rgba(0,104,255,0.18);
+  --accent-pink: #D44B82;
+  --accent-pink-light: rgba(212,75,130,0.08);
+  --accent-pink-border: rgba(212,75,130,0.22);
 }
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'SVN-Gilroy','Gilroy','Nunito',-apple-system,sans-serif;background:var(--bg-deep);background-image:radial-gradient(ellipse at 20% 0%,rgba(0,104,255,0.08) 0%,transparent 50%),radial-gradient(ellipse at 80% 100%,rgba(55,222,231,0.05) 0%,transparent 45%);color:var(--text-primary);line-height:1.6}
+body{font-family:'SVN-Gilroy','Gilroy','Nunito',-apple-system,sans-serif;background:var(--bg-deep);background-image:radial-gradient(ellipse at 20% 0%,rgba(0,104,255,0.05) 0%,transparent 50%),radial-gradient(ellipse at 80% 100%,rgba(0,137,160,0.04) 0%,transparent 45%);color:var(--text-primary);line-height:1.6}
 .container{max-width:1380px;margin:0 auto;padding:0 28px}
 
 /* HEADER */
@@ -35,15 +35,15 @@ body{font-family:'SVN-Gilroy','Gilroy','Nunito',-apple-system,sans-serif;backgro
 .header::after{content:'';position:absolute;bottom:-40%;left:15%;width:400px;height:400px;background:radial-gradient(circle,rgba(240,107,160,0.06) 0%,transparent 70%);pointer-events:none}
 .header-inner{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1}
 .brand{display:flex;align-items:center;gap:14px}
-.brand-logo{width:46px;height:46px;background:linear-gradient(135deg,#0068FF,#37DEE7);border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;color:#fff;letter-spacing:-0.5px;flex-shrink:0}
-.brand-name{font-size:12px;font-weight:700;color:var(--accent-cyan);letter-spacing:2px;text-transform:uppercase}
-.brand-sub{font-size:11px;color:var(--text-secondary);font-weight:400}
+.brand-logo{width:46px;height:46px;background:linear-gradient(135deg,#0068FF,#37DEE7);border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:18px;color:#fff;letter-spacing:-0.5px;flex-shrink:0}
+.brand-name{font-size:14px;font-weight:700;color:var(--accent-cyan);letter-spacing:2px;text-transform:uppercase}
+.brand-sub{font-size:13px;color:var(--text-secondary);font-weight:400}
 .header-center{text-align:center;flex:1;padding:0 24px}
-.report-eyebrow{font-size:11px;font-weight:700;color:var(--accent-cyan);letter-spacing:3px;text-transform:uppercase;margin-bottom:5px}
-.report-title{font-size:26px;font-weight:900;background:linear-gradient(135deg,#fff 0%,#37DEE7 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.report-eyebrow{font-size:13px;font-weight:700;color:var(--accent-cyan);letter-spacing:3px;text-transform:uppercase;margin-bottom:5px}
+.report-title{font-size:31px;font-weight:900;background:linear-gradient(135deg,#fff 0%,#37DEE7 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .header-right{text-align:right}
-.period-badge{font-size:12px;font-weight:700;color:var(--accent-blue);background:var(--accent-blue-light);border:1px solid var(--border-blue);padding:6px 16px;border-radius:20px;display:inline-block}
-.gen-date{font-size:11px;color:var(--text-muted);margin-top:4px;text-align:center}
+.period-badge{font-size:14px;font-weight:700;color:var(--accent-blue);background:var(--accent-blue-light);border:1px solid var(--border-blue);padding:6px 16px;border-radius:20px;display:inline-block}
+.gen-date{font-size:13px;color:var(--text-muted);margin-top:4px;text-align:center}
 
 /* MAIN */
 .main{padding:28px 0 48px}
@@ -51,28 +51,28 @@ body{font-family:'SVN-Gilroy','Gilroy','Nunito',-apple-system,sans-serif;backgro
 /* SECTIONS */
 .section{margin-bottom:36px}
 .section-header{display:flex;align-items:center;gap:10px;margin-bottom:18px;padding-bottom:10px;border-bottom:1px solid var(--border)}
-.section-icon{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
+.section-icon{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
 .si-blue{background:var(--accent-blue-light)}.si-cyan{background:var(--accent-cyan-light)}.si-green{background:rgba(34,197,94,.1)}.si-purple{background:rgba(168,85,247,.1)}.si-orange{background:rgba(245,158,11,.1)}
-.section-title{font-size:14px;font-weight:800;color:var(--text-primary);letter-spacing:1.2px;text-transform:uppercase}
-.section-sub{font-size:11px;color:var(--text-secondary);margin-left:auto;font-weight:400}
+.section-title{font-size:17px;font-weight:800;color:var(--text-primary);letter-spacing:1.2px;text-transform:uppercase}
+.section-sub{font-size:13px;color:var(--text-secondary);margin-left:auto;font-weight:400}
 
 /* KPI GRID */
 .kpi-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-bottom:36px}
-.kpi-card{background:linear-gradient(145deg,var(--bg-card-light) 0%,var(--bg-card) 100%);border:1px solid var(--border);border-radius:14px;padding:18px 20px;position:relative;overflow:hidden;transition:border-color .2s,transform .2s,box-shadow .2s;cursor:default;box-shadow:0 4px 20px rgba(0,0,0,0.35),0 1px 3px rgba(0,0,0,0.2)}
-.kpi-card:hover{border-color:var(--accent-blue);transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,0.4),0 0 12px rgba(0,104,255,0.12)}
+.kpi-card{background:linear-gradient(145deg,var(--bg-card-light) 0%,var(--bg-card) 100%);border:1px solid var(--border);border-radius:14px;padding:18px 20px;position:relative;overflow:hidden;transition:border-color .2s,transform .2s,box-shadow .2s;cursor:default;box-shadow:0 4px 20px rgba(0,80,180,0.10),0 1px 3px rgba(0,0,0,0.04)}
+.kpi-card:hover{border-color:var(--accent-blue);transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,80,180,0.13),0 0 12px rgba(0,104,255,0.10)}
 .kpi-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:14px 14px 0 0}
 .kc-cyan::before{background:linear-gradient(90deg,#37DEE7,#0068FF)}
 .kc-blue::before{background:linear-gradient(90deg,#0068FF,#37DEE7)}
 .kc-orange::before{background:linear-gradient(90deg,#F59E0B,#D97706)}
 .kc-green::before{background:linear-gradient(90deg,#22C55E,#16A34A)}
 .kc-purple::before{background:linear-gradient(90deg,#A855F7,#7C3AED)}
-.kpi-label{font-size:10px;font-weight:700;color:var(--text-secondary);letter-spacing:1px;text-transform:uppercase;margin-bottom:7px}
-.kpi-value{font-size:26px;font-weight:900;color:var(--text-primary);line-height:1;margin-bottom:5px}
+.kpi-label{font-size:12px;font-weight:700;color:var(--text-secondary);letter-spacing:1px;text-transform:uppercase;margin-bottom:7px}
+.kpi-value{font-size:31px;font-weight:900;color:var(--text-primary);line-height:1;margin-bottom:5px}
 .kpi-value.cyan{color:var(--accent-cyan)}
-.kpi-sub{font-size:10px;color:var(--text-muted);line-height:1.4}
+.kpi-sub{font-size:12px;color:var(--text-muted);line-height:1.4}
 
 /* CARDS */
-.card{background:linear-gradient(150deg,var(--bg-card-light) 0%,var(--bg-card) 100%);border:1px solid var(--border);border-radius:14px;padding:22px;position:relative;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.35),0 1px 4px rgba(0,0,0,0.2)}
+.card{background:linear-gradient(150deg,var(--bg-card-light) 0%,var(--bg-card) 100%);border:1px solid var(--border);border-radius:14px;padding:22px;position:relative;overflow:hidden;box-shadow:0 4px 24px rgba(0,80,180,0.10),0 1px 4px rgba(0,0,0,0.04)}
 .card-glow{position:absolute;top:0;right:0;width:180px;height:180px;background:radial-gradient(circle,rgba(0,104,255,0.06) 0%,transparent 70%);pointer-events:none}
 
 /* GRIDS */
@@ -83,29 +83,29 @@ body{font-family:'SVN-Gilroy','Gilroy','Nunito',-apple-system,sans-serif;backgro
 
 /* STAT ROWS */
 .stats-row{display:flex;gap:12px;margin-bottom:18px;flex-wrap:wrap}
-.stat-item{flex:1;min-width:90px;background:rgba(255,255,255,0.07);border:1px solid var(--border-blue);border-radius:10px;padding:12px 14px;text-align:center}
-.stat-value{font-size:20px;font-weight:800;color:var(--text-primary);display:block}
+.stat-item{flex:1;min-width:90px;background:rgba(0,104,255,0.05);border:1px solid var(--border-blue);border-radius:10px;padding:12px 14px;text-align:center}
+.stat-value{font-size:24px;font-weight:800;color:var(--text-primary);display:block}
 .stat-value.cyan{color:var(--accent-cyan)}.stat-value.blue{color:var(--accent-blue)}
-.stat-label{font-size:10px;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.7px;font-weight:600;margin-top:2px;display:block}
+.stat-label{font-size:12px;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.7px;font-weight:600;margin-top:2px;display:block}
 
 /* TABLES */
-.data-table{width:100%;border-collapse:collapse;font-size:12.5px}
+.data-table{width:100%;border-collapse:collapse;font-size:15px}
 .data-table thead tr{border-bottom:1px solid var(--border)}
-.data-table th{text-align:left;padding:7px 10px;font-size:10px;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.9px;white-space:nowrap}
+.data-table th{text-align:left;padding:7px 10px;font-size:12px;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.9px;white-space:nowrap}
 .data-table th:not(:first-child){text-align:right}
 .data-table td{padding:9px 10px;border-bottom:1px solid rgba(55,222,231,0.05);color:var(--text-primary);vertical-align:middle}
 .data-table td:not(:first-child){text-align:right;font-weight:600}
-.data-table tbody tr:hover{background:rgba(0,104,255,0.05)}
+.data-table tbody tr:hover{background:rgba(0,104,255,0.04)}
 .data-table tbody tr:last-child td{border-bottom:none}
 .post-title{font-weight:600;color:var(--text-primary);max-width:240px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.post-date{font-size:10px;color:var(--text-muted);margin-top:1px}
-.ctag{display:inline-block;font-size:9px;font-weight:700;padding:1px 7px;border-radius:8px;background:var(--accent-blue-light);color:var(--accent-blue);margin-top:2px}
+.post-date{font-size:12px;color:var(--text-muted);margin-top:1px}
+.ctag{display:inline-block;font-size:11px;font-weight:700;padding:1px 7px;border-radius:8px;background:var(--accent-blue-light);color:var(--accent-blue);margin-top:2px}
 .m-cyan{color:var(--accent-cyan);font-weight:800}
 .m-good{color:#22C55E}.m-mid{color:#F59E0B}.m-low{color:var(--text-muted)}
 .dash{color:var(--text-muted)}
 
 /* CHANNEL BADGES */
-.cbadge{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:700;padding:3px 9px;border-radius:10px}
+.cbadge{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:700;padding:3px 9px;border-radius:10px}
 .cb-fb{background:rgba(24,119,242,.15);color:#4E9DF5}
 .cb-li{background:rgba(0,119,181,.15);color:#0A84C8}
 .cb-zalo{background:var(--accent-blue-light);color:#5599FF}
@@ -113,7 +113,7 @@ body{font-family:'SVN-Gilroy','Gilroy','Nunito',-apple-system,sans-serif;backgro
 .cb-ads{background:rgba(168,85,247,.15);color:#A855F7}
 
 /* NOTE BOX */
-.note{background:rgba(55,222,231,0.08);border:1px solid rgba(55,222,231,0.22);border-radius:8px;padding:9px 12px;font-size:11px;color:var(--text-secondary);margin-top:12px;line-height:1.5}
+.note{background:rgba(0,137,160,0.06);border:1px solid rgba(0,137,160,0.20);border-radius:8px;padding:9px 12px;font-size:13px;color:var(--text-secondary);margin-top:12px;line-height:1.5}
 .note strong{color:var(--accent-cyan)}
 
 /* CHART WRAPPERS */
@@ -124,134 +124,146 @@ body{font-family:'SVN-Gilroy','Gilroy','Nunito',-apple-system,sans-serif;backgro
 /* FUNNEL */
 .funnel{display:flex;flex-direction:column;gap:9px;padding:4px 0}
 .funnel-step{display:flex;align-items:center;gap:10px}
-.f-label{width:120px;font-size:10px;color:var(--text-secondary);text-align:right;font-weight:600;text-transform:uppercase;letter-spacing:.5px;flex-shrink:0}
-.f-bar-wrap{flex:1;height:38px;background:rgba(0,104,255,0.12);border-radius:6px;overflow:hidden}
-.f-bar{height:100%;border-radius:6px;display:flex;align-items:center;padding-left:10px;font-size:12px;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden}
+.f-label{width:120px;font-size:12px;color:var(--text-secondary);text-align:right;font-weight:600;text-transform:uppercase;letter-spacing:.5px;flex-shrink:0}
+.f-bar-wrap{flex:1;height:38px;background:rgba(0,104,255,0.08);border-radius:6px;overflow:hidden}
+.f-bar{height:100%;border-radius:6px;display:flex;align-items:center;padding-left:10px;font-size:14px;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden}
 .fb1{background:linear-gradient(90deg,#0068FF,#0052CC)}
 .fb2{background:linear-gradient(90deg,#1175FF,#006AEB)}
 .fb3{background:linear-gradient(90deg,#20AABF,#37DEE7)}
 .fb4{background:linear-gradient(90deg,#22C55E,#16A34A)}
 .fb5{background:linear-gradient(90deg,#A855F7,#8B5CF6)}
-.f-value{width:90px;font-size:14px;font-weight:800;color:var(--text-primary);text-align:right;flex-shrink:0}
-.f-rate{width:48px;font-size:10px;color:var(--text-muted);text-align:right;flex-shrink:0}
+.f-value{width:90px;font-size:17px;font-weight:800;color:var(--text-primary);text-align:right;flex-shrink:0}
+.f-rate{width:48px;font-size:12px;color:var(--text-muted);text-align:right;flex-shrink:0}
 
 /* EVENT CARDS */
 .event-cards{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.event-card{background:linear-gradient(145deg,var(--bg-card-light) 0%,var(--bg-card) 100%);border:1px solid var(--border);border-radius:14px;padding:22px;position:relative;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.3)}
+.event-card{background:linear-gradient(145deg,var(--bg-card-light) 0%,var(--bg-card) 100%);border:1px solid var(--border);border-radius:14px;padding:22px;position:relative;overflow:hidden;box-shadow:0 4px 20px rgba(0,80,180,0.09)}
 .event-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px}
 .ec1::before{background:linear-gradient(90deg,#0068FF,#37DEE7)}
 .ec2::before{background:linear-gradient(90deg,#A855F7,#37DEE7)}
-.event-name{font-size:14px;font-weight:800;color:var(--text-primary);margin-bottom:3px}
-.event-type{font-size:11px;color:var(--text-secondary);margin-bottom:14px}
+.event-name{font-size:17px;font-weight:800;color:var(--text-primary);margin-bottom:3px}
+.event-type{font-size:13px;color:var(--text-secondary);margin-bottom:14px}
 .event-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:14px}
-.event-stat{background:rgba(255,255,255,0.07);border-radius:9px;padding:9px;text-align:center}
-.es-value{font-size:18px;font-weight:800;display:block;color:var(--text-primary)}
+.event-stat{background:rgba(0,104,255,0.05);border-radius:9px;padding:9px;text-align:center}
+.es-value{font-size:22px;font-weight:800;display:block;color:var(--text-primary)}
 .es-value.cyan{color:var(--accent-cyan)}
-.es-label{font-size:9px;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.5px;font-weight:600}
+.es-label{font-size:11px;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.5px;font-weight:600}
 .event-footer{display:flex;justify-content:space-between;align-items:center;padding-top:11px;border-top:1px solid var(--border)}
-.event-cpl{font-size:11px;color:#F59E0B;font-weight:700;background:rgba(245,158,11,.1);padding:4px 10px;border-radius:9px}
+.event-cpl{font-size:13px;color:#F59E0B;font-weight:700;background:rgba(245,158,11,.1);padding:4px 10px;border-radius:9px}
 
 /* PR CARD */
-.pr-card{background:linear-gradient(145deg,var(--bg-card-light) 0%,var(--bg-card) 100%);border:1px solid var(--border);border-radius:14px;padding:18px 22px;display:flex;align-items:center;gap:18px;box-shadow:0 3px 16px rgba(0,0,0,0.28)}
-.pr-source{font-size:12px;font-weight:700;color:var(--accent-cyan);padding:6px 13px;background:var(--accent-cyan-light);border-radius:8px;white-space:nowrap}
-.pr-title-text{font-size:13px;font-weight:600;color:var(--text-primary);flex:1}
-.pr-meta{font-size:10px;color:var(--text-muted);margin-top:2px}
+.pr-card{background:linear-gradient(145deg,var(--bg-card-light) 0%,var(--bg-card) 100%);border:1px solid var(--border);border-radius:14px;padding:18px 22px;display:flex;align-items:center;gap:18px;box-shadow:0 3px 16px rgba(0,80,180,0.09)}
+.pr-source{font-size:14px;font-weight:700;color:var(--accent-cyan);padding:6px 13px;background:var(--accent-cyan-light);border-radius:8px;white-space:nowrap}
+.pr-title-text{font-size:16px;font-weight:600;color:var(--text-primary);flex:1}
+.pr-meta{font-size:12px;color:var(--text-muted);margin-top:2px}
 .pr-stat{text-align:center;padding:0 16px;border-left:1px solid var(--border)}
-.prs-value{font-size:22px;font-weight:800;color:var(--text-primary);display:block}
-.prs-label{font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:.5px;font-weight:600}
+.prs-value{font-size:26px;font-weight:800;color:var(--text-primary);display:block}
+.prs-label{font-size:12px;color:var(--text-muted);text-transform:uppercase;letter-spacing:.5px;font-weight:600}
 
 /* DIVIDER */
 .divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:28px 0}
 
 /* FOOTER */
-.footer{background:linear-gradient(135deg,#0D2145 0%,#071428 100%);border-top:1px solid var(--border);padding:18px 0;text-align:center;font-size:11px;color:var(--text-muted)}
+.footer{background:linear-gradient(135deg,#0D2145 0%,#071428 100%);border-top:1px solid var(--border);padding:18px 0;text-align:center;font-size:13px;color:var(--text-muted)}
 .footer span{color:var(--accent-blue);font-weight:600}
 
 /* INSIGHT BOX */
 .insights{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
-.insight{background:rgba(0,104,255,0.12);border:1px solid var(--border-blue);border-radius:10px;padding:13px 15px}
-.insight-label{font-size:10px;font-weight:700;color:var(--accent-cyan);text-transform:uppercase;letter-spacing:.8px;margin-bottom:5px}
-.insight-text{font-size:11px;color:var(--text-secondary);line-height:1.5}
+.insight{background:rgba(0,104,255,0.06);border:1px solid var(--border-blue);border-radius:10px;padding:13px 15px}
+.insight-label{font-size:12px;font-weight:700;color:var(--accent-cyan);text-transform:uppercase;letter-spacing:.8px;margin-bottom:5px}
+.insight-text{font-size:13px;color:var(--text-secondary);line-height:1.5}
 .insight-text strong{color:var(--text-primary)}
 
 /* NEXT ACTIONS & APPROVAL */
 .actions-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.action-col{background:linear-gradient(145deg,var(--bg-card-light) 0%,var(--bg-card) 100%);border:1px solid var(--border);border-radius:14px;padding:20px;box-shadow:0 4px 20px rgba(0,0,0,0.3)}
+.action-col{background:linear-gradient(145deg,var(--bg-card-light) 0%,var(--bg-card) 100%);border:1px solid var(--border);border-radius:14px;padding:20px;box-shadow:0 4px 20px rgba(0,80,180,0.09)}
 .action-col-header{display:flex;align-items:center;gap:8px;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border)}
-.action-col-title{font-size:12px;font-weight:800;color:var(--text-primary);text-transform:uppercase;letter-spacing:1px}
+.action-col-title{font-size:14px;font-weight:800;color:var(--text-primary);text-transform:uppercase;letter-spacing:1px}
 .action-item{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid rgba(55,222,231,0.05)}
 .action-item:last-child{border-bottom:none;padding-bottom:0}
 .action-dot{width:7px;height:7px;border-radius:50%;margin-top:5px;flex-shrink:0}
-.ad-high{background:#F06BA0}.ad-med{background:#F59E0B}.ad-low{background:#37DEE7}
-.action-text{font-size:12px;color:var(--text-primary);font-weight:500;line-height:1.4}
-.action-meta{font-size:10px;color:var(--text-muted);margin-top:2px}
-.atag{display:inline-block;font-size:9px;font-weight:700;padding:1px 7px;border-radius:8px;margin-right:4px}
+.ad-high{background:#F06BA0}.ad-med{background:#F59E0B}.ad-low{background:#0089A0}
+.action-text{font-size:14px;color:var(--text-primary);font-weight:500;line-height:1.4}
+.action-meta{font-size:12px;color:var(--text-muted);margin-top:2px}
+.atag{display:inline-block;font-size:11px;font-weight:700;padding:1px 7px;border-radius:8px;margin-right:4px}
 .at-budget{background:rgba(240,107,160,0.12);color:#F06BA0}
 .at-task{background:rgba(0,104,255,0.12);color:#5599FF}
 .at-event{background:rgba(55,222,231,0.1);color:#37DEE7}
-.approval-badge{font-size:9px;font-weight:700;padding:2px 8px;border-radius:8px;margin-left:8px;white-space:nowrap;flex-shrink:0}
-.ab-urgent{background:rgba(240,107,160,0.15);color:#F06BA0;border:1px solid rgba(240,107,160,0.25)}
-.ab-review{background:rgba(245,158,11,0.12);color:#F59E0B;border:1px solid rgba(245,158,11,0.2)}
+.approval-badge{font-size:11px;font-weight:700;padding:2px 8px;border-radius:8px;margin-left:8px;white-space:nowrap;flex-shrink:0}
+.ab-urgent{background:rgba(212,75,130,0.12);color:#D44B82;border:1px solid rgba(212,75,130,0.25)}
+.ab-review{background:rgba(245,158,11,0.10);color:#C97D0A;border:1px solid rgba(245,158,11,0.25)}
 .approval-cta-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
-.approval-cta{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:700;padding:5px 12px;border-radius:8px;text-decoration:none;cursor:pointer;letter-spacing:.3px;transition:opacity .15s,transform .15s}
+.approval-cta{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;padding:5px 12px;border-radius:8px;text-decoration:none;cursor:pointer;letter-spacing:.3px;transition:opacity .15s,transform .15s}
 .approval-cta:hover{opacity:.85;transform:translateY(-1px)}
-.cta-review{background:rgba(55,222,231,0.12);color:#37DEE7;border:1px solid rgba(55,222,231,0.25)}
-.cta-support{background:linear-gradient(135deg,rgba(240,107,160,0.18),rgba(168,85,247,0.15));color:#F06BA0;border:1px solid rgba(240,107,160,0.3)}
+.cta-review{background:rgba(0,137,160,0.10);color:#0089A0;border:1px solid rgba(0,137,160,0.30)}
+.cta-support{background:linear-gradient(135deg,rgba(212,75,130,0.12),rgba(168,85,247,0.10));color:#D44B82;border:1px solid rgba(212,75,130,0.3)}
 
 /* OKR */
-.okr-card{background:linear-gradient(145deg,var(--bg-card-light) 0%,var(--bg-card) 100%);border:1px solid var(--border);border-radius:14px;padding:20px 24px;box-shadow:0 4px 20px rgba(0,0,0,0.3)}
+.okr-card{background:linear-gradient(145deg,var(--bg-card-light) 0%,var(--bg-card) 100%);border:1px solid var(--border);border-radius:14px;padding:20px 24px;box-shadow:0 4px 20px rgba(0,80,180,0.09)}
 .okr-objective{margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--border)}
-.okr-obj-label{font-size:10px;font-weight:700;color:var(--accent-cyan);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
-.okr-obj-text{font-size:14px;font-weight:800;color:var(--text-primary);line-height:1.3}
+.okr-obj-label{font-size:12px;font-weight:700;color:var(--accent-cyan);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+.okr-obj-text{font-size:17px;font-weight:800;color:var(--text-primary);line-height:1.3}
 .okr-krs{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
-.okr-kr{background:rgba(255,255,255,0.07);border:1px solid var(--border-blue);border-radius:10px;padding:12px 14px}
-.okr-kr-label{font-size:9px;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.7px;margin-bottom:6px}
-.okr-kr-current{font-size:20px;font-weight:800;color:var(--text-primary);display:block;line-height:1}
-.okr-kr-target{font-size:10px;color:var(--text-muted);margin-top:3px}
-.okr-progress{height:4px;background:rgba(55,222,231,0.08);border-radius:2px;margin-top:9px;overflow:hidden}
+.okr-kr{background:rgba(0,104,255,0.05);border:1px solid var(--border-blue);border-radius:10px;padding:12px 14px}
+.okr-kr-label{font-size:11px;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.7px;margin-bottom:6px}
+.okr-kr-current{font-size:24px;font-weight:800;color:var(--text-primary);display:block;line-height:1}
+.okr-kr-target{font-size:12px;color:var(--text-muted);margin-top:3px}
+.okr-progress{height:4px;background:rgba(0,104,255,0.08);border-radius:2px;margin-top:9px;overflow:hidden}
 .okr-bar{height:100%;border-radius:2px}
 .okr-bar.good{background:linear-gradient(90deg,#22C55E,#37DEE7)}
 .okr-bar.mid{background:linear-gradient(90deg,#F59E0B,#F06BA0)}
-.okr-bar.low{background:linear-gradient(90deg,#EF4444,#F06BA0)}
-.okr-status{font-size:9px;font-weight:700;margin-top:5px}
-.os-on{color:#22C55E}.os-risk{color:#F59E0B}.os-off{color:#EF4444}
+.okr-bar.low{background:linear-gradient(90deg,#EF4444,#D44B82)}
+.okr-status{font-size:11px;font-weight:700;margin-top:5px}
+.os-on{color:#22C55E}.os-risk{color:#F59E0B}.os-off{color:#C92020}
 
 /* GAP ANALYSIS */
 .gap-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;position:relative;z-index:1}
-.gap-card{background:rgba(10,22,50,0.8);border:1px solid rgba(240,107,160,0.18);border-radius:12px;overflow:hidden;transition:border-color .2s,transform .2s}
-.gap-card:hover{border-color:rgba(240,107,160,0.38);transform:translateY(-2px)}
-.gap-card-title{font-size:11px;font-weight:800;color:var(--text-primary);padding:11px 14px;background:rgba(0,104,255,0.12);border-bottom:1px solid rgba(55,222,231,0.1);text-transform:uppercase;letter-spacing:.8px}
+.gap-card{background:#FFFFFF;border:1px solid rgba(212,75,130,0.15);border-radius:12px;overflow:hidden;transition:border-color .2s,transform .2s}
+.gap-card:hover{border-color:rgba(212,75,130,0.35);transform:translateY(-2px)}
+.gap-card-title{font-size:13px;font-weight:800;color:var(--text-primary);padding:11px 14px;background:rgba(0,104,255,0.12);border-bottom:1px solid rgba(55,222,231,0.1);text-transform:uppercase;letter-spacing:.8px}
 .gap-steps{display:grid;grid-template-columns:repeat(4,1fr)}
 .gap-step{padding:10px 12px;border-right:1px solid rgba(55,222,231,0.06)}
 .gap-step:last-child{border-right:none}
-.gap-step-label{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;margin-bottom:5px}
+.gap-step-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;margin-bottom:5px}
 .gs-current .gap-step-label{color:#8899BB}
-.gs-future .gap-step-label{color:#37DEE7}
-.gs-gap .gap-step-label{color:#F06BA0}
+.gs-future .gap-step-label{color:#0089A0}
+.gs-gap .gap-step-label{color:#D44B82}
 .gs-action .gap-step-label{color:#22C55E}
-.gap-step-text{font-size:10.5px;color:var(--text-secondary);line-height:1.45}
+.gap-step-text{font-size:13px;color:var(--text-secondary);line-height:1.45}
 .gap-step-text strong{color:var(--text-primary)}
 
 /* PINK ACCENT */
-.si-pink{background:rgba(240,107,160,0.12)}
+.si-pink{background:rgba(212,75,130,0.10)}
 .kc-pink::before{background:linear-gradient(90deg,#F06BA0,#A855F7)}
-.m-pink{color:#F06BA0;font-weight:700}
+.m-pink{color:#D44B82;font-weight:700}
 .cw-donut{position:relative;height:275px}
 
 /* EXPERT INSIGHT PANEL */
-.expert-panel{background:linear-gradient(135deg,rgba(240,107,160,0.09) 0%,rgba(0,104,255,0.14) 55%,rgba(15,35,80,0.97) 100%);border:1px solid var(--accent-pink-border);border-radius:16px;padding:24px;margin-bottom:36px;position:relative;overflow:hidden;box-shadow:0 4px 28px rgba(0,0,0,0.3)}
+.expert-panel{background:linear-gradient(135deg,rgba(212,75,130,0.06) 0%,rgba(0,104,255,0.08) 55%,rgba(242,247,255,0.99) 100%);border:1px solid var(--accent-pink-border);border-radius:16px;padding:24px;margin-bottom:36px;position:relative;overflow:hidden;box-shadow:0 4px 28px rgba(0,80,180,0.10)}
 .expert-panel::before{content:'';position:absolute;top:-35%;right:-4%;width:320px;height:320px;background:radial-gradient(circle,rgba(240,107,160,0.07) 0%,transparent 70%);pointer-events:none}
 .expert-panel::after{content:'';position:absolute;bottom:-50%;left:10%;width:280px;height:280px;background:radial-gradient(circle,rgba(0,104,255,0.06) 0%,transparent 70%);pointer-events:none}
 .expert-header{display:flex;align-items:center;gap:10px;margin-bottom:18px;padding-bottom:12px;border-bottom:1px solid var(--accent-pink-border);position:relative;z-index:1}
-.expert-title-text{font-size:14px;font-weight:800;color:var(--text-primary);letter-spacing:1px;text-transform:uppercase}
-.expert-badge{margin-left:auto;font-size:10px;font-weight:700;color:var(--accent-pink);background:var(--accent-pink-light);border:1px solid var(--accent-pink-border);padding:3px 11px;border-radius:10px;text-transform:uppercase;letter-spacing:.8px}
+.expert-title-text{font-size:17px;font-weight:800;color:var(--text-primary);letter-spacing:1px;text-transform:uppercase}
+.expert-badge{margin-left:auto;font-size:12px;font-weight:700;color:var(--accent-pink);background:var(--accent-pink-light);border:1px solid var(--accent-pink-border);padding:3px 11px;border-radius:10px;text-transform:uppercase;letter-spacing:.8px}
 .expert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;position:relative;z-index:1}
-.expert-card{background:rgba(10,22,52,0.72);border:1px solid rgba(240,107,160,0.18);border-radius:12px;padding:14px 16px;transition:border-color .2s,transform .2s}
+.expert-card{background:rgba(242,247,255,0.95);border:1px solid rgba(212,75,130,0.15);border-radius:12px;padding:14px 16px;transition:border-color .2s,transform .2s}
 .expert-card:hover{border-color:rgba(240,107,160,0.40);transform:translateY(-2px)}
-.expert-card-label{font-size:10px;font-weight:700;color:var(--accent-pink);text-transform:uppercase;letter-spacing:.7px;margin-bottom:6px}
-.expert-card-body{font-size:11.5px;color:var(--text-secondary);line-height:1.55}
+.expert-card-label{font-size:12px;font-weight:700;color:var(--accent-pink);text-transform:uppercase;letter-spacing:.7px;margin-bottom:6px}
+.expert-card-body{font-size:14px;color:var(--text-secondary);line-height:1.55}
 .expert-card-body strong{color:var(--text-primary)}
-.expert-card-action{font-size:10px;color:var(--accent-cyan);font-weight:700;margin-top:8px;padding-top:7px;border-top:1px solid var(--border);text-transform:uppercase;letter-spacing:.3px;line-height:1.4}
+.expert-card-action{font-size:12px;color:var(--accent-cyan);font-weight:700;margin-top:8px;padding-top:7px;border-top:1px solid var(--border);text-transform:uppercase;letter-spacing:.3px;line-height:1.4}
+
+/* DATE RANGE PICKER */
+.date-range-picker{display:flex;flex-direction:column;align-items:flex-end;gap:5px}
+.drp-label{font-size:10px;color:rgba(255,255,255,0.50);font-weight:700;letter-spacing:1px;text-transform:uppercase}
+.drp-row{display:flex;align-items:center;gap:7px}
+.drp-input{background:rgba(255,255,255,0.13);border:1px solid rgba(255,255,255,0.22);border-radius:8px;color:#fff;font-size:13px;font-weight:600;padding:6px 11px;font-family:inherit;cursor:pointer;outline:none;transition:border-color .15s,background .15s}
+.drp-input:hover,.drp-input:focus{border-color:rgba(55,180,255,0.55);background:rgba(255,255,255,0.18)}
+.drp-input::-webkit-calendar-picker-indicator{filter:invert(1);opacity:.55;cursor:pointer}
+.drp-arrow{color:rgba(255,255,255,0.40);font-size:14px;font-weight:700}
+.drp-btn{background:linear-gradient(135deg,#0068FF,#0052CC);color:#fff;border:none;border-radius:8px;font-size:12px;font-weight:700;padding:6px 17px;cursor:pointer;font-family:inherit;letter-spacing:.3px;transition:opacity .15s,transform .15s;box-shadow:0 2px 8px rgba(0,104,255,0.35)}
+.drp-btn:hover{opacity:.88;transform:translateY(-1px)}
+.drp-period-display{font-size:11px;color:rgba(255,255,255,0.45);text-align:right;letter-spacing:.3px}
 </style>
 </head>
 <body>
@@ -269,11 +281,19 @@ body{font-family:'SVN-Gilroy','Gilroy','Nunito',-apple-system,sans-serif;backgro
       </div>
       <div class="header-center">
         <div class="report-eyebrow">Marketing Performance Report</div>
-        <div class="report-title">Tháng 4 / 2026</div>
+        <div class="report-title" id="reportTitle">Marketing Performance</div>
       </div>
       <div class="header-right">
-        <div class="period-badge">01/04 — 30/04/2026</div>
-        <div class="gen-date">Generated: 18/05/2026</div>
+        <div class="date-range-picker">
+          <div class="drp-label">📅 Kỳ báo cáo</div>
+          <div class="drp-row">
+            <input type="month" id="drpFrom" value="2026-04" class="drp-input" onchange="updatePeriod()">
+            <span class="drp-arrow">→</span>
+            <input type="month" id="drpTo" value="2026-04" class="drp-input" onchange="updatePeriod()">
+            <button class="drp-btn" onclick="updatePeriod()">Apply</button>
+          </div>
+          <div class="drp-period-display" id="periodDisplay">01/04 — 30/04/2026</div>
+        </div>
       </div>
     </div>
   </div>
@@ -289,7 +309,7 @@ body{font-family:'SVN-Gilroy','Gilroy','Nunito',-apple-system,sans-serif;backgro
     <div class="section-header">
       <div class="section-icon si-blue">📊</div>
       <span class="section-title">Tổng Quan Hiệu Suất</span>
-      <span class="section-sub">Tất cả kênh · Tháng 4/2026</span>
+      <span class="section-sub">Tất cả kênh</span>
     </div>
     <div class="kpi-grid">
       <div class="kpi-card kc-cyan">
@@ -335,9 +355,9 @@ body{font-family:'SVN-Gilroy','Gilroy','Nunito',-apple-system,sans-serif;backgro
     <div class="actions-grid">
       <div class="action-col">
         <div class="action-col-header">
-          <span style="font-size:15px">🎯</span>
+          <span style="font-size:18px">🎯</span>
           <span class="action-col-title">Next Key Actions</span>
-          <span style="margin-left:auto;font-size:10px;color:var(--text-muted)">T5–T6/2026</span>
+          <span style="margin-left:auto;font-size:12px;color:var(--text-muted)">T5–T6/2026</span>
         </div>
         <div class="action-item">
           <div class="action-dot ad-high"></div>
@@ -354,9 +374,9 @@ body{font-family:'SVN-Gilroy','Gilroy','Nunito',-apple-system,sans-serif;backgro
       </div>
       <div class="action-col">
         <div class="action-col-header">
-          <span style="font-size:15px">✅</span>
+          <span style="font-size:18px">✅</span>
           <span class="action-col-title">Need Approval</span>
-          <span style="margin-left:auto;font-size:10px;color:var(--text-muted)">Chờ Line Manager</span>
+          <span style="margin-left:auto;font-size:12px;color:var(--text-muted)">Chờ Line Manager</span>
         </div>
         <div class="action-item" style="padding-bottom:14px">
           <div class="action-dot ad-high" style="margin-top:6px"></div>
@@ -447,10 +467,10 @@ body{font-family:'SVN-Gilroy','Gilroy','Nunito',-apple-system,sans-serif;backgro
     </div>
     <!-- Framework header -->
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-bottom:14px;position:relative;z-index:1">
-      <div style="padding:7px 12px;text-align:center;background:rgba(136,153,187,0.06);border-radius:8px 0 0 8px;border:1px solid rgba(136,153,187,0.1)"><span style="font-size:10px;font-weight:700;color:#8899BB;text-transform:uppercase;letter-spacing:.8px">📍 Current State</span></div>
-      <div style="padding:7px 12px;text-align:center;background:rgba(55,222,231,0.06);border:1px solid rgba(55,222,231,0.1);border-left:none"><span style="font-size:10px;font-weight:700;color:#37DEE7;text-transform:uppercase;letter-spacing:.8px">🎯 Future State</span></div>
-      <div style="padding:7px 12px;text-align:center;background:rgba(240,107,160,0.06);border:1px solid rgba(240,107,160,0.15);border-left:none"><span style="font-size:10px;font-weight:700;color:#F06BA0;text-transform:uppercase;letter-spacing:.8px">⚡ The Gap</span></div>
-      <div style="padding:7px 12px;text-align:center;background:rgba(34,197,94,0.06);border-radius:0 8px 8px 0;border:1px solid rgba(34,197,94,0.1);border-left:none"><span style="font-size:10px;font-weight:700;color:#22C55E;text-transform:uppercase;letter-spacing:.8px">🚀 Ideas &amp; Action</span></div>
+      <div style="padding:7px 12px;text-align:center;background:rgba(136,153,187,0.06);border-radius:8px 0 0 8px;border:1px solid rgba(136,153,187,0.1)"><span style="font-size:12px;font-weight:700;color:#8899BB;text-transform:uppercase;letter-spacing:.8px">📍 Current State</span></div>
+      <div style="padding:7px 12px;text-align:center;background:rgba(55,222,231,0.06);border:1px solid rgba(55,222,231,0.1);border-left:none"><span style="font-size:12px;font-weight:700;color:#37DEE7;text-transform:uppercase;letter-spacing:.8px">🎯 Future State</span></div>
+      <div style="padding:7px 12px;text-align:center;background:rgba(240,107,160,0.06);border:1px solid rgba(240,107,160,0.15);border-left:none"><span style="font-size:12px;font-weight:700;color:#F06BA0;text-transform:uppercase;letter-spacing:.8px">⚡ The Gap</span></div>
+      <div style="padding:7px 12px;text-align:center;background:rgba(34,197,94,0.06);border-radius:0 8px 8px 0;border:1px solid rgba(34,197,94,0.1);border-left:none"><span style="font-size:12px;font-weight:700;color:#22C55E;text-transform:uppercase;letter-spacing:.8px">🚀 Ideas &amp; Action</span></div>
     </div>
     <div class="gap-grid">
       <div class="gap-card">
@@ -497,12 +517,12 @@ body{font-family:'SVN-Gilroy','Gilroy','Nunito',-apple-system,sans-serif;backgro
     <div class="g2">
       <div class="card">
         <div class="card-glow"></div>
-        <div style="font-size:11px;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px">Leads by Channel</div>
+        <div style="font-size:13px;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px">Leads by Channel</div>
         <div class="cw-donut"><canvas id="leadsChart"></canvas></div>
       </div>
       <div class="card">
         <div class="card-glow"></div>
-        <div style="font-size:11px;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px">Chi Phí Theo Kênh</div>
+        <div style="font-size:13px;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px">Chi Phí Theo Kênh</div>
         <div class="cw-donut"><canvas id="spendChart"></canvas></div>
       </div>
     </div>
@@ -559,22 +579,22 @@ body{font-family:'SVN-Gilroy','Gilroy','Nunito',-apple-system,sans-serif;backgro
     <div class="g2" style="margin-bottom:18px">
       <!-- In Progress by Bucket -->
       <div class="card">
-        <div style="font-size:11px;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px">🔄 Đang diễn ra theo Bucket</div>
+        <div style="font-size:13px;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px">🔄 Đang diễn ra theo Bucket</div>
         <table class="data-table">
           <thead><tr><th style="text-align:left">Bucket</th><th>In Progress</th><th style="text-align:left">Đầu việc chính</th></tr></thead>
           <tbody>
-            <tr><td>🟠 Operation</td><td class="m-cyan">9</td><td style="text-align:left;font-size:11px;color:var(--text-muted)">Website revamp · MKT dashboard · Full funnel dashboard · Video branding · AI Framework...</td></tr>
-            <tr><td>🟣 Brand &amp; Position</td><td class="m-cyan">4</td><td style="text-align:left;font-size:11px;color:var(--text-muted)">White Paper 2026 · Solution playbook · Paperwork · Gửi biến động số dư</td></tr>
-            <tr><td>⚪ To do</td><td class="m-cyan">3</td><td style="text-align:left;font-size:11px;color:var(--text-muted)">Case study PNJ · Case study partner · Tổng hợp Đại lý + Automation Email</td></tr>
-            <tr><td>🟦 Business Growth</td><td class="m-cyan">1</td><td style="text-align:left;font-size:11px;color:var(--text-muted)">[Newsletter] Quarterly</td></tr>
-            <tr><td>🟡 OA new sub</td><td class="m-low">0</td><td style="text-align:left;font-size:11px;color:var(--text-muted)">—</td></tr>
+            <tr><td>🟠 Operation</td><td class="m-cyan">9</td><td style="text-align:left;font-size:13px;color:var(--text-muted)">Website revamp · MKT dashboard · Full funnel dashboard · Video branding · AI Framework...</td></tr>
+            <tr><td>🟣 Brand &amp; Position</td><td class="m-cyan">4</td><td style="text-align:left;font-size:13px;color:var(--text-muted)">White Paper 2026 · Solution playbook · Paperwork · Gửi biến động số dư</td></tr>
+            <tr><td>⚪ To do</td><td class="m-cyan">3</td><td style="text-align:left;font-size:13px;color:var(--text-muted)">Case study PNJ · Case study partner · Tổng hợp Đại lý + Automation Email</td></tr>
+            <tr><td>🟦 Business Growth</td><td class="m-cyan">1</td><td style="text-align:left;font-size:13px;color:var(--text-muted)">[Newsletter] Quarterly</td></tr>
+            <tr><td>🟡 OA new sub</td><td class="m-low">0</td><td style="text-align:left;font-size:13px;color:var(--text-muted)">—</td></tr>
           </tbody>
         </table>
       </div>
 
       <!-- Priority Tasks -->
       <div class="card">
-        <div style="font-size:11px;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px">⚡ Priority &amp; Quan trọng — Đang active</div>
+        <div style="font-size:13px;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px">⚡ Priority &amp; Quan trọng — Đang active</div>
         <div class="action-item">
           <div class="action-dot ad-high"></div>
           <div style="flex:1">
@@ -585,7 +605,7 @@ body{font-family:'SVN-Gilroy','Gilroy','Nunito',-apple-system,sans-serif;backgro
             <div class="action-meta"><span class="atag at-budget">Brand &amp; Position</span>50% · Overdue 20/04</div>
           </div>
         </div>
-        <div style="font-size:9px;font-weight:700;color:var(--accent-cyan);text-transform:uppercase;letter-spacing:.8px;margin:10px 0 6px">P3 — Important</div>
+        <div style="font-size:11px;font-weight:700;color:var(--accent-cyan);text-transform:uppercase;letter-spacing:.8px;margin:10px 0 6px">P3 — Important</div>
         <div class="action-item"><div class="action-dot ad-high" style="background:#F59E0B"></div><div><div class="action-text">Báo cáo MKT Performance</div><div class="action-meta"><span class="atag at-task">To do</span>0% · Overdue 06/05</div></div></div>
         <div class="action-item"><div class="action-dot ad-high" style="background:#F59E0B"></div><div><div class="action-text">Business Messaging White Paper 2026</div><div class="action-meta"><span class="atag at-task">Brand &amp; Position</span>50% · In Progress</div></div></div>
         <div class="action-item"><div class="action-dot ad-high" style="background:#F59E0B"></div><div><div class="action-text">Website revamp phase 2</div><div class="action-meta"><span class="atag at-task">Operation</span>50% · Overdue 10/05</div></div></div>
@@ -606,7 +626,7 @@ body{font-family:'SVN-Gilroy','Gilroy','Nunito',-apple-system,sans-serif;backgro
     <div class="section-header">
       <div class="section-icon si-cyan">🌐</div>
       <span class="section-title">Website — zalo.solutions</span>
-      <span class="section-sub">Google Analytics · Tháng 4/2026</span>
+      <span class="section-sub">Google Analytics</span>
     </div>
     <div class="card">
       <div class="stats-row">
@@ -637,7 +657,7 @@ body{font-family:'SVN-Gilroy','Gilroy','Nunito',-apple-system,sans-serif;backgro
     <div style="margin-bottom:22px">
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
         <span class="cbadge cb-fb">● Facebook Page</span>
-        <span style="font-size:11px;color:var(--text-muted)">5 bài viết · Tháng 4/2026</span>
+        <span style="font-size:13px;color:var(--text-muted)">5 bài viết</span>
       </div>
       <div class="g2-1">
         <div class="card">
@@ -671,7 +691,7 @@ body{font-family:'SVN-Gilroy','Gilroy','Nunito',-apple-system,sans-serif;backgro
           <div class="note"><strong>Tổng:</strong> Views 27,175 · Reach 22,832 · Engagement 100 · Clicks 439 &nbsp;·&nbsp; Source: Facebook Page Insights</div>
         </div>
         <div class="card">
-          <div style="font-size:11px;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">Reach by Post</div>
+          <div style="font-size:13px;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">Reach by Post</div>
           <div class="cw"><canvas id="fbReachChart"></canvas></div>
         </div>
       </div>
@@ -681,11 +701,11 @@ body{font-family:'SVN-Gilroy','Gilroy','Nunito',-apple-system,sans-serif;backgro
     <div style="margin-bottom:22px">
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
         <span class="cbadge cb-li">● LinkedIn</span>
-        <span style="font-size:11px;color:var(--text-muted)">5 bài viết · Tháng 4/2026</span>
+        <span style="font-size:13px;color:var(--text-muted)">5 bài viết</span>
       </div>
       <div class="g1-2">
         <div class="card">
-          <div style="font-size:11px;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">CTR & Engagement Rate (%)</div>
+          <div style="font-size:13px;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">CTR & Engagement Rate (%)</div>
           <div class="cw"><canvas id="liCtrChart"></canvas></div>
         </div>
         <div class="card">
@@ -709,8 +729,8 @@ body{font-family:'SVN-Gilroy','Gilroy','Nunito',-apple-system,sans-serif;backgro
               <tr>
                 <td><div class="post-title">ZBS: Trực tiếp - Trực diện - Trực chiến</div><div class="post-date">25/04/2026</div><span class="ctag">C04</span></td>
                 <td>539</td><td>8</td><td>11</td><td>287</td>
-                <td style="color:var(--accent-cyan);font-weight:800;font-size:13px">53.25%</td>
-                <td style="color:var(--accent-cyan);font-weight:800;font-size:13px">55.29%</td>
+                <td style="color:var(--accent-cyan);font-weight:800;font-size:16px">53.25%</td>
+                <td style="color:var(--accent-cyan);font-weight:800;font-size:16px">55.29%</td>
               </tr>
               <tr>
                 <td><div class="post-title">Từ tìm hiểu đến quyết định nhập học</div><div class="post-date">28/04/2026</div><span class="ctag">C05</span></td>
@@ -727,7 +747,7 @@ body{font-family:'SVN-Gilroy','Gilroy','Nunito',-apple-system,sans-serif;backgro
     <div>
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
         <span class="cbadge cb-zalo">● Zalo Official Account</span>
-        <span style="font-size:11px;color:var(--text-muted)">3 bài viết · 2 OA channels</span>
+        <span style="font-size:13px;color:var(--text-muted)">3 bài viết · 2 OA channels</span>
       </div>
       <div class="card">
         <table class="data-table">
@@ -738,19 +758,19 @@ body{font-family:'SVN-Gilroy','Gilroy','Nunito',-apple-system,sans-serif;backgro
             <tr>
               <td><span class="cbadge cb-zalo">OA Zalo Official</span></td>
               <td><div class="post-title">ZBS trong ngành Giáo dục & Đào tạo</div><span class="ctag">C05</span></td>
-              <td style="text-align:left;font-size:11px;color:var(--text-muted)">28/04/2026</td>
+              <td style="text-align:left;font-size:13px;color:var(--text-muted)">28/04/2026</td>
               <td class="m-cyan">8,611</td><td>189</td><td>1</td><td>3</td><td class="m-cyan">193</td>
             </tr>
             <tr>
               <td><span class="cbadge cb-zalo">OA ZBS</span></td>
               <td><div class="post-title">Tham gia sự kiện InnoEx #3</div><span class="ctag">C02</span></td>
-              <td style="text-align:left;font-size:11px;color:var(--text-muted)">16/04/2026</td>
+              <td style="text-align:left;font-size:13px;color:var(--text-muted)">16/04/2026</td>
               <td>78</td><td>7</td><td>0</td><td>0</td><td>7</td>
             </tr>
             <tr>
               <td><span class="cbadge cb-zalo">OA ZBS</span></td>
               <td><div class="post-title">Ra mắt gói dịch vụ Zalo OA mới (01/06)</div><span class="ctag">C06</span></td>
-              <td style="text-align:left;font-size:11px;color:var(--text-muted)">20/04/2026</td>
+              <td style="text-align:left;font-size:13px;color:var(--text-muted)">20/04/2026</td>
               <td>69</td><td>9</td><td>0</td><td>0</td><td>9</td>
             </tr>
           </tbody>
@@ -804,7 +824,7 @@ body{font-family:'SVN-Gilroy','Gilroy','Nunito',-apple-system,sans-serif;backgro
         <div class="note"><strong>Tổng:</strong> 1,619 delivered · 243 clicks · Avg Open Rate <strong>36%</strong> · Avg CTR <strong>6.5%</strong></div>
       </div>
       <div class="card">
-        <div style="font-size:11px;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">Open Rate & CTR (%)</div>
+        <div style="font-size:13px;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">Open Rate & CTR (%)</div>
         <div class="cw-tall"><canvas id="emailChart"></canvas></div>
       </div>
     </div>
@@ -823,7 +843,7 @@ body{font-family:'SVN-Gilroy','Gilroy','Nunito',-apple-system,sans-serif;backgro
     </div>
     <div class="g2">
       <div class="card">
-        <div style="font-size:11px;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px">Conversion Funnel</div>
+        <div style="font-size:13px;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px">Conversion Funnel</div>
         <div class="funnel">
           <div class="funnel-step">
             <div class="f-label">Impressions</div>
@@ -853,7 +873,7 @@ body{font-family:'SVN-Gilroy','Gilroy','Nunito',-apple-system,sans-serif;backgro
         </div>
       </div>
       <div class="card">
-        <div style="font-size:11px;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px">Chỉ Số Hiệu Suất</div>
+        <div style="font-size:13px;font-weight:700;color:var(--text-secondary);text-transform:uppercase;letter-spacing:1px;margin-bottom:14px">Chỉ Số Hiệu Suất</div>
         <div class="stats-row" style="flex-wrap:wrap">
           <div class="stat-item" style="flex-basis:calc(50% - 6px)"><span class="stat-value cyan">161</span><span class="stat-label">Leads</span></div>
           <div class="stat-item" style="flex-basis:calc(50% - 6px)"><span class="stat-value">16,864</span><span class="stat-label">CPL (VND)</span></div>
@@ -874,7 +894,7 @@ body{font-family:'SVN-Gilroy','Gilroy','Nunito',-apple-system,sans-serif;backgro
     <div class="section-header">
       <div class="section-icon si-green">🎪</div>
       <span class="section-title">Events</span>
-      <span class="section-sub">GrowthVerse Summit + InnoEx #3 · Tháng 4/2026</span>
+      <span class="section-sub">GrowthVerse Summit + InnoEx #3</span>
     </div>
     <div class="event-cards">
       <div class="event-card ec1">
@@ -886,11 +906,11 @@ body{font-family:'SVN-Gilroy','Gilroy','Nunito',-apple-system,sans-serif;backgro
           <div class="event-stat"><span class="es-value">80.1%</span><span class="es-label">Show-up Rate</span></div>
         </div>
         <div class="event-footer">
-          <div style="font-size:12px;color:var(--text-secondary)">Tài trợ: <strong style="color:var(--text-primary)">37,000,000 VND</strong></div>
+          <div style="font-size:14px;color:var(--text-secondary)">Tài trợ: <strong style="color:var(--text-primary)">37,000,000 VND</strong></div>
           <div style="display:flex;gap:14px;align-items:center">
             <div style="text-align:center">
-              <div style="font-size:22px;font-weight:800;color:var(--accent-cyan)">38</div>
-              <div style="font-size:9px;color:var(--text-muted);text-transform:uppercase;font-weight:600">Leads</div>
+              <div style="font-size:26px;font-weight:800;color:var(--accent-cyan)">38</div>
+              <div style="font-size:11px;color:var(--text-muted);text-transform:uppercase;font-weight:600">Leads</div>
             </div>
             <div class="event-cpl">CPL: 973,684 ₫</div>
           </div>
@@ -924,7 +944,7 @@ body{font-family:'SVN-Gilroy','Gilroy','Nunito',-apple-system,sans-serif;backgro
     <div class="section-header">
       <div class="section-icon si-cyan">📰</div>
       <span class="section-title">Tin Tức / PR</span>
-      <span class="section-sub">Bài báo đối tác · Tháng 4/2026</span>
+      <span class="section-sub">Bài báo đối tác</span>
     </div>
     <div class="pr-card">
       <div class="pr-source">Znews.vn</div>
@@ -960,55 +980,55 @@ body{font-family:'SVN-Gilroy','Gilroy','Nunito',-apple-system,sans-serif;backgro
             <td><div class="post-title">C01 — OA Du lịch & Lưu trú</div></td>
             <td style="text-align:left"><span class="cbadge cb-fb">FB</span> <span class="cbadge cb-li">LI</span> <span class="cbadge cb-ads">Ads</span></td>
             <td class="m-cyan">161</td><td>2,715,240</td><td class="m-good">16,864</td>
-            <td style="text-align:left;font-size:11px;color:var(--text-muted)">FB Organic reach 22.5K · LI CTR 29.24%</td>
+            <td style="text-align:left;font-size:13px;color:var(--text-muted)">FB Organic reach 22.5K · LI CTR 29.24%</td>
           </tr>
           <tr>
             <td><div class="post-title">C02 — InnoEx Innovation Insiders #3</div></td>
             <td style="text-align:left"><span class="cbadge cb-fb">FB</span> <span class="cbadge cb-li">LI</span> <span class="cbadge cb-email">Email</span> <span class="cbadge cb-zalo">OA</span></td>
             <td>50</td><td>50,000,000</td><td class="m-low">1,000,000</td>
-            <td style="text-align:left;font-size:11px;color:var(--text-muted)">Multi-channel · PR Znews 3,883 views</td>
+            <td style="text-align:left;font-size:13px;color:var(--text-muted)">Multi-channel · PR Znews 3,883 views</td>
           </tr>
           <tr>
             <td><div class="post-title">C03 — GrowthVerse Summit 2026</div></td>
-            <td style="text-align:left"><span style="font-size:10px;color:var(--text-muted)">Event</span></td>
+            <td style="text-align:left"><span style="font-size:12px;color:var(--text-muted)">Event</span></td>
             <td>38</td><td>37,000,000</td><td class="m-low">973,684</td>
-            <td style="text-align:left;font-size:11px;color:var(--text-muted)">738 reg · 591 attendees · 80.1% show-up</td>
+            <td style="text-align:left;font-size:13px;color:var(--text-muted)">738 reg · 591 attendees · 80.1% show-up</td>
           </tr>
           <tr>
             <td><div class="post-title">C04 — Event Recap Q2</div></td>
             <td style="text-align:left"><span class="cbadge cb-fb">FB</span> <span class="cbadge cb-li">LI</span></td>
             <td class="dash">—</td><td class="dash">—</td><td class="dash">—</td>
-            <td style="text-align:left;font-size:11px;color:var(--accent-cyan);font-weight:700">LI CTR 53.25% 🔥 — Top LinkedIn post</td>
+            <td style="text-align:left;font-size:13px;color:var(--accent-cyan);font-weight:700">LI CTR 53.25% 🔥 — Top LinkedIn post</td>
           </tr>
           <tr>
             <td><div class="post-title">C05 — Tuyển sinh Giáo dục (VUS Case Study)</div></td>
             <td style="text-align:left"><span class="cbadge cb-fb">FB</span> <span class="cbadge cb-li">LI</span> <span class="cbadge cb-zalo">OA</span></td>
             <td class="dash">—</td><td class="dash">—</td><td class="dash">—</td>
-            <td style="text-align:left;font-size:11px;color:var(--text-muted)">OA Views 8,611 · LI CTR 33.71%</td>
+            <td style="text-align:left;font-size:13px;color:var(--text-muted)">OA Views 8,611 · LI CTR 33.71%</td>
           </tr>
           <tr>
             <td><div class="post-title">C06 — Ra mắt 4 gói Zalo OA mới</div></td>
             <td style="text-align:left"><span class="cbadge cb-email">Email</span> <span class="cbadge cb-zalo">OA</span></td>
             <td class="dash">—</td><td class="dash">—</td><td class="dash">—</td>
-            <td style="text-align:left;font-size:11px;color:var(--text-muted)">Email Open Rate 38.1% · CTR 10.1%</td>
+            <td style="text-align:left;font-size:13px;color:var(--text-muted)">Email Open Rate 38.1% · CTR 10.1%</td>
           </tr>
           <tr>
             <td><div class="post-title">C07 — Mời tài trợ chuỗi sự kiện Q2</div></td>
             <td style="text-align:left"><span class="cbadge cb-email">Email</span></td>
             <td class="dash">—</td><td class="dash">—</td><td class="dash">—</td>
-            <td style="text-align:left;font-size:11px;color:var(--accent-cyan);font-weight:700">Best Open Rate 44.9% — targeted list</td>
+            <td style="text-align:left;font-size:13px;color:var(--accent-cyan);font-weight:700">Best Open Rate 44.9% — targeted list</td>
           </tr>
           <tr>
             <td><div class="post-title">C08 — Bản tin ZBS Quý 2/2026</div></td>
             <td style="text-align:left"><span class="cbadge cb-email">Email</span></td>
             <td class="dash">—</td><td class="dash">—</td><td class="dash">—</td>
-            <td style="text-align:left;font-size:11px;color:var(--text-muted)">Open Rate 39.2% · CTR 8.8%</td>
+            <td style="text-align:left;font-size:13px;color:var(--text-muted)">Open Rate 39.2% · CTR 8.8%</td>
           </tr>
           <tr>
             <td><div class="post-title">C09 — Thông báo nghỉ lễ 30/4 - 1/5</div></td>
             <td style="text-align:left"><span class="cbadge cb-fb">FB</span> <span class="cbadge cb-li">LI</span></td>
             <td class="dash">—</td><td class="dash">—</td><td class="dash">—</td>
-            <td style="text-align:left;font-size:11px;color:var(--text-muted)">Operational post · low engagement expected</td>
+            <td style="text-align:left;font-size:13px;color:var(--text-muted)">Operational post · low engagement expected</td>
           </tr>
         </tbody>
       </table>
@@ -1020,13 +1040,13 @@ body{font-family:'SVN-Gilroy','Gilroy','Nunito',-apple-system,sans-serif;backgro
 
 <footer class="footer">
   <div class="container">
-    <p>Zalo Business Solutions &nbsp;·&nbsp; Marketing Performance Report · Tháng 4/2026 &nbsp;·&nbsp; Generated by <span>Claude AI</span> &nbsp;·&nbsp; 18/05/2026</p>
+    <p>Zalo Business Solutions &nbsp;·&nbsp; Marketing Performance Report  &nbsp;·&nbsp; Generated by <span>Claude AI</span> &nbsp;·&nbsp; 18/05/2026</p>
   </div>
 </footer>
 
 <script>
-Chart.defaults.color = '#C2D4EE';
-Chart.defaults.borderColor = 'rgba(55,222,231,0.12)';
+Chart.defaults.color = '#3A5A82';
+Chart.defaults.borderColor = 'rgba(0,104,255,0.10)';
 Chart.defaults.font.family = "'SVN-Gilroy','Nunito',sans-serif";
 // Unregister datalabels globally — only apply per-chart to donuts
 Chart.unregister(ChartDataLabels);
@@ -1040,7 +1060,7 @@ new Chart(document.getElementById('leadsChart'), {
     datasets: [{
       data: [161, 50, 38, 35],
       backgroundColor: ['#0068FF','#A855F7','#37DEE7','#22C55E'],
-      borderColor: '#132C56',
+      borderColor: '#FFFFFF',
       borderWidth: 3,
       hoverOffset: 8
     }]
@@ -1049,7 +1069,7 @@ new Chart(document.getElementById('leadsChart'), {
     responsive: true, maintainAspectRatio: false, cutout: '66%',
     layout: { padding: 38 },
     plugins: {
-      legend: { position: 'bottom', labels: { padding: 12, font: { size: 10, weight: '600' }, color: '#FFF', usePointStyle: true, pointStyleWidth: 7, boxHeight: 7 } },
+      legend: { position: 'bottom', labels: { padding: 12, font: { size: 12, weight: '600' }, color: '#0B1A32', usePointStyle: true, pointStyleWidth: 7, boxHeight: 7 } },
       tooltip: { callbacks: { label: ctx => ` ${ctx.raw} leads (${((ctx.raw/284)*100).toFixed(1)}%)` } },
       datalabels: {
         anchor: 'end', align: 'end', offset: 6,
@@ -1059,7 +1079,7 @@ new Chart(document.getElementById('leadsChart'), {
           const pct = ((value / 284) * 100).toFixed(1);
           return `${value.toLocaleString()}\n${pct}%`;
         },
-        font: { size: 10, weight: '700' },
+        font: { size: 12, weight: '700' },
         textAlign: 'center',
         textShadowBlur: 4,
         textShadowColor: 'rgba(0,0,0,0.6)'
@@ -1077,7 +1097,7 @@ new Chart(document.getElementById('spendChart'), {
     datasets: [{
       data: [50000000, 37000000, 2715240],
       backgroundColor: ['#A855F7','#37DEE7','#0068FF'],
-      borderColor: '#132C56',
+      borderColor: '#FFFFFF',
       borderWidth: 3,
       hoverOffset: 8
     }]
@@ -1086,7 +1106,7 @@ new Chart(document.getElementById('spendChart'), {
     responsive: true, maintainAspectRatio: false, cutout: '66%',
     layout: { padding: 38 },
     plugins: {
-      legend: { position: 'bottom', labels: { padding: 12, font: { size: 10, weight: '600' }, color: '#FFF', usePointStyle: true, pointStyleWidth: 7, boxHeight: 7 } },
+      legend: { position: 'bottom', labels: { padding: 12, font: { size: 12, weight: '600' }, color: '#0B1A32', usePointStyle: true, pointStyleWidth: 7, boxHeight: 7 } },
       tooltip: { callbacks: { label: ctx => ` ${(ctx.raw/1000000).toFixed(1)}M VND (${((ctx.raw/89715240)*100).toFixed(1)}%)` } },
       datalabels: {
         anchor: 'end', align: 'end', offset: 6,
@@ -1097,7 +1117,7 @@ new Chart(document.getElementById('spendChart'), {
           const m = (value / 1000000).toFixed(1);
           return `${m}M\n${pct}%`;
         },
-        font: { size: 10, weight: '700' },
+        font: { size: 12, weight: '700' },
         textAlign: 'center',
         textShadowBlur: 4,
         textShadowColor: 'rgba(0,0,0,0.6)'
@@ -1122,8 +1142,8 @@ new Chart(document.getElementById('fbReachChart'), {
     indexAxis: 'y', responsive: true, maintainAspectRatio: false,
     plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ` Reach: ${ctx.raw.toLocaleString()}` } } },
     scales: {
-      x: { grid: { color: 'rgba(55,222,231,0.06)' }, ticks: { font: { size: 10 } } },
-      y: { grid: { display: false }, ticks: { font: { size: 10 }, color: '#C2D4EE' } }
+      x: { grid: { color: 'rgba(0,104,255,0.08)' }, ticks: { font: { size: 10 } } },
+      y: { grid: { display: false }, ticks: { font: { size: 10 }, color: '#3A5A82' } }
     }
   }
 });
@@ -1140,10 +1160,10 @@ new Chart(document.getElementById('liCtrChart'), {
   },
   options: {
     responsive: true, maintainAspectRatio: false,
-    plugins: { legend: { position: 'top', labels: { font: { size: 10 }, padding: 10, color: '#FFF', usePointStyle: true } } },
+    plugins: { legend: { position: 'top', labels: { font: { size: 10 }, padding: 10, color: '#0B1A32', usePointStyle: true } } },
     scales: {
-      x: { grid: { display: false }, ticks: { font: { size: 9 }, color: '#C2D4EE' } },
-      y: { grid: { color: 'rgba(55,222,231,0.06)' }, ticks: { font: { size: 10 }, callback: v => v + '%' } }
+      x: { grid: { display: false }, ticks: { font: { size: 9 }, color: '#3A5A82' } },
+      y: { grid: { color: 'rgba(0,104,255,0.08)' }, ticks: { font: { size: 10 }, callback: v => v + '%' } }
     }
   }
 });
@@ -1160,13 +1180,34 @@ new Chart(document.getElementById('emailChart'), {
   },
   options: {
     responsive: true, maintainAspectRatio: false,
-    plugins: { legend: { position: 'top', labels: { font: { size: 10 }, padding: 10, color: '#FFF', usePointStyle: true } } },
+    plugins: { legend: { position: 'top', labels: { font: { size: 10 }, padding: 10, color: '#0B1A32', usePointStyle: true } } },
     scales: {
-      x: { grid: { display: false }, ticks: { font: { size: 9 }, color: '#C2D4EE' } },
-      y: { grid: { color: 'rgba(55,222,231,0.06)' }, ticks: { font: { size: 10 }, callback: v => v + '%' } }
+      x: { grid: { display: false }, ticks: { font: { size: 9 }, color: '#3A5A82' } },
+      y: { grid: { color: 'rgba(0,104,255,0.08)' }, ticks: { font: { size: 10 }, callback: v => v + '%' } }
     }
   }
 });
+
+// ── Date Range Picker ──────────────────────────────────────────
+function updatePeriod() {
+  const from = document.getElementById('drpFrom').value;
+  const to   = document.getElementById('drpTo').value;
+  if (!from || !to) return;
+  const [fy, fm] = from.split('-').map(Number);
+  const [ty, tm] = to.split('-').map(Number);
+  // Last day of 'to' month
+  const lastDay = new Date(ty, tm, 0).getDate();
+  const pad = n => String(n).padStart(2, '0');
+  const dispEl = document.getElementById('periodDisplay');
+  if (dispEl) dispEl.textContent = `01/${pad(fm)}/${fy} — ${lastDay}/${pad(tm)}/${ty}`;
+  const months = ['Tháng 1','Tháng 2','Tháng 3','Tháng 4','Tháng 5','Tháng 6',
+                  'Tháng 7','Tháng 8','Tháng 9','Tháng 10','Tháng 11','Tháng 12'];
+  const titleEl = document.getElementById('reportTitle');
+  if (titleEl) titleEl.textContent = from === to
+    ? months[fm-1] + ' / ' + fy
+    : months[fm-1] + ' – ' + months[tm-1] + ' ' + fy;
+}
+
 </script>
 </body>
 </html>
